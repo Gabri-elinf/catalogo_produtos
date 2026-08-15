@@ -16,8 +16,8 @@ Exportação de dados para CSV.
 Tecnologias utilizadas
 Tecnologia	Finalidade
 Python	Linguagem principal do projeto
-FastAPI	Criação da API e documentação automática [cite:166][cite:182]
-Uvicorn	Servidor ASGI para rodar a aplicação localmente [cite:124][cite:186]
+FastAPI	Criação da API e documentação automática
+Uvicorn	Servidor ASGI para rodar a aplicação localmente
 SQLite	Banco de dados inicial para simplificar a configuração local
 SQLAlchemy	Camada de modelagem e acesso ao banco
 Pydantic	Validação de dados de entrada e saída
@@ -52,7 +52,7 @@ pip freeze > requirements.txt
 ```powershell
 uvicorn main:app --reload
 ```
-O Uvicorn é o servidor responsável por rodar a aplicação FastAPI localmente, e a opção `--reload` reinicia automaticamente o servidor quando o código é alterado durante o desenvolvimento.[cite:124][cite:186]
+O Uvicorn é o servidor responsável por rodar a aplicação FastAPI localmente, e a opção `--reload` reinicia automaticamente o servidor quando o código é alterado durante o desenvolvimento.
 Exemplo de `main.py`
 ```python
 from fastapi import FastAPI
@@ -63,13 +63,13 @@ app = FastAPI()
 def inicio():
     return {"mensagem": "API funcionando"}
 ```
-Esse exemplo mínimo já é suficiente para expor uma rota inicial e gerar a documentação automática da API.[cite:157][cite:166]
+Esse exemplo mínimo já é suficiente para expor uma rota inicial e gerar a documentação automática da API.
 Como testar no navegador
 Com o servidor em execução, os principais endereços locais são:
 API raiz: `http://127.0.0.1:8000/`
 Swagger UI: `http://127.0.0.1:8000/docs`
 ReDoc: `http://127.0.0.1:8000/redoc`
-O FastAPI disponibiliza Swagger UI em `/docs` e ReDoc em `/redoc` por padrão, sem configuração extra necessária.[cite:169][cite:176]
+O FastAPI disponibiliza Swagger UI em `/docs` e ReDoc em `/redoc` por padrão, sem configuração extra necessária.
 
 Próximos passos
 As próximas etapas previstas para o projeto são:
